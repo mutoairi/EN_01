@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManagerScript : MonoBehaviour
+public class GameManagerScript2 : MonoBehaviour
 {
     //”z—ñ‚ÌéŒ¾
     int[] map;
@@ -55,4 +55,3 @@ public class GameManagerScript : MonoBehaviour
         };
     }
 }
-
