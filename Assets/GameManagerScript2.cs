@@ -48,13 +48,16 @@ public class GameManagerScript2 : MonoBehaviour
             int velocity = moveTo - moveFrom;
 
             //プライヤーの移動先からさらに先へ2(箱)を移動させる
-            //
+            //箱の移動処理。MoveNumberメソッド内でMoveNumberメソッドを
+            //呼び、処理が再起している。移動不可をboolで記録
+            bool success = MoveNumber(2, moveTo, moveTo + velocity);
+
+            //もし箱移動が失敗したら、プレイヤーの移動も失敗
+            if (!success) { return false; }
+
         }
      
-
-
-
-            map[moveTo] = number;
+         map[moveTo] = number;
         map[moveFrom] = 0;
         return true;
     }
